@@ -97,6 +97,7 @@ const App = () => {
             notificationTimeOut(3)
           })
           .catch((error) => {
+            console.log(error)
             setError('The person could not be found. Please refresh and retry.')
             notificationTimeOut()
           })
@@ -139,12 +140,7 @@ const App = () => {
         window.confirm(
           `${personObject.name} is already added to phonebook, replace the old number with a new one?`
         )
-          ? updatePerson(personObject.number, personObject.name).catch(
-              (error) => {
-                setError(error.response.data.error)
-                notificationTimeOut(3)
-              }
-            )
+          ? updatePerson(personObject.number, personObject.name)
           : console.log('canceled')
       } else if (!nameDouble && numberDouble) {
         //jos numero esiintyy tuplana, mutta nimi ei, ei lisäystä hyväksytä.
