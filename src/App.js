@@ -159,7 +159,7 @@ const App = () => {
     }
   }
 
-  //Etsii id:n kenttässä nimen perusteella ja päivittää sen perusteella oikean henkilön.
+  //Etsii ja päivittää oikean henkilön.
   const updatePerson = (number, name) => {
     const id = persons.find((person) => person.name === name).id
     const person = persons.find((n) => n.id === id)
@@ -172,7 +172,7 @@ const App = () => {
           // axios ei ilmoita tilaa 404 virheenä, joten se on määritettävä sellaiseksi itse
           throw new Error('404')
         } else {
-          setPersons(persons.map((n) => (n.id !== id ? n : response.data)))
+          loadPersons()
           setMessage(`${person.name}'s number was successfully updated`)
           notificationTimeOut(5)
         }
