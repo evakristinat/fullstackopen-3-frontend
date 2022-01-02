@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+main {
+  margin: 4%;
+}
+
+input {
+  width: 80vw;
+  max-width: 480px;
+  min-width: 280px;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+}
+
+button {
+  margin-top: 2%;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(128, 128, 128, 0.301);
+}
+
+td {
+  width: 33vw;
+  max-width: 210px;
+  padding: 2% 3% 2% 1%;
+}
+
+td:last-child {
+  width: 63px;
+}
+
+.notification-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 85vw;
+  height: 70px;
+  max-width: 480px;
+}
+
+.error,
+.success {
+  font-size: 0.8em;
+  padding: 15px;
+  color: white;
+  margin: auto;
+}
+
+.error {
+  background-color: rgb(233, 56, 56);
+}
+
+.success {
+  background-color: rgb(13, 156, 13);
+}
